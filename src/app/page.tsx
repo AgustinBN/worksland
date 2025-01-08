@@ -63,7 +63,7 @@ const Home = () => {
           </a>
           , where I gained valuable experience working with an incredible
           team.&nbsp;
-          <a className="font-bold text-indigo-400 hover:underline hover:decoration-2">
+          <a className="font-bold text-indigo-400 hover:underline hover:decoration-2" href="/works">
             More information about my works.
           </a>
         </p>
