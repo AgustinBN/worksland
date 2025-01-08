@@ -1,101 +1,106 @@
-import Image from "next/image";
+import Section from "@/components/section";
+import SkillCard from "@/components/skill-card";
+import { FaNewspaper } from "react-icons/fa6";
+import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from "react-icons/io";
+import { IoLogoReact } from "react-icons/io5";
+import { SiNextdotjs, SiTypescript } from "react-icons/si";
 
-export default function Home() {
+const skills = [
+  { icon: IoLogoHtml5, label: "HTML" },
+  { icon: IoLogoJavascript, label: "JavaScript" },
+  { icon: SiTypescript, label: "TypeScript" },
+  { icon: IoLogoCss3, label: "CSS" },
+  { icon: IoLogoReact, label: "React" },
+  { icon: SiNextdotjs, label: "Next JS" },
+];
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-fit px-4 sm:px-8 lg:px-16">
+      <div className="flex flex-col gap-5 mt-5 justify-center items-center">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-semibold text-center text-neutral-300">
+            Software Engineering Student
+          </h2>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center text-neutral-200">
+            Hello!, I&apos;m Agustín{" "}
+            <span className="text-indigo-500">Bianchi</span>
+          </h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <p className="text-center w-full sm:w-2/3 lg:w-1/3">
+          A developer based in Buenos Aires, Argentina, with one dream: to
+          become a Software Engineer. Currently, I&apos;m learning and focusing
+          on React and React Native.
+        </p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex items-center gap-1 p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
+            <FaNewspaper />
+            Download CV
+          </div>
+          <div className="p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
+            Reach me!
+          </div>
+        </div>
+      </div>
+
+      <Section title="Works">
+        <p className="text-justify w-full sm:w-2/3 lg:w-1/3">
+          I was involved in the development of a{" "}
+          <a
+            href="https://fivem.net/"
+            target="_blank"
+            className="text-[#f40552] font-bold hover:underline hover:decoration-2 hover:underline-offset-4"
+          >
+            FiveM
+          </a>{" "}
+          server called&nbsp;
+          <a
+            href="https://x.com/infamesrp"
+            target="_blank"
+            className="text-[#f9f6c5] font-bold hover:underline hover:decoration-2 hover:underline-offset-4"
+          >
+            InfamesRP
+          </a>
+          , where I gained valuable experience working with an incredible
+          team.&nbsp;
+          <a className="font-bold text-indigo-400 hover:underline hover:decoration-2">
+            More information about my works.
+          </a>
+        </p>
+      </Section>
+
+      <Section title="Passions">
+        <p className="text-justify w-full sm:w-2/3 lg:w-1/3">
+          I&apos;m passionate about{" "}
+          <span className="text-indigo-400 font-bold">aviation</span>,
+          fascinated by the science behind flight and the innovation in aircraft
+          design. <span className="text-indigo-400 font-bold">Soccer</span> is
+          another big part of my life, as I enjoy both playing and following the
+          global game, appreciating the strategy and unity it brings to people.{" "}
+          <span className="text-indigo-400 font-bold">Technologies</span> also
+          excite me, especially the constant advancements that shape our world,
+          from AI to the latest invention. Above all, I&apos;m driven by a love
+          for <span className="text-indigo-400 font-bold">learning</span>,
+          always seeking new knowledge to fuel both my personal and professional
+          growth.
+        </p>
+      </Section>
+
+      <Section title="Skills">
+        <div className="grid grid-cols-3 gap-3">
+          {skills.map(({ icon, label }, index) => (
+            <SkillCard key={index} Icon={icon} label={label} />
+          ))}
+        </div>
+      </Section>
+      <Section title="Lenguage">
+        <div className="grid grid-cols-2 gap-3">
+          <SkillCard label={"SPANISH"} />
+          <SkillCard label={"ENGLISH"} />
+        </div>
+      </Section>
+    </main>
   );
-}
+};
+
+export default Home;
