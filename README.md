@@ -23,7 +23,7 @@ To run this project locally, follow the steps below:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/AgustinBN/worksland.git
-    cd portfolio-web
+    cd worksland
     ```
 
 2. **Install dependencies**:
