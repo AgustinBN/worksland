@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="w-full flex justify-end md:justify-center align-center gap-3">
-      <div className="flex items-center justify-between mr-5 md:mr-0 bg-neutral-900/20 border-[1px] border-neutral-800/40 w-fit gap-5 mt-4 p-2 rounded-xl fixed z-50 backdrop-blur-sm">
+      <div className="flex items-center justify-between mr-5 md:mr-0 bg-neutral-900/20 border-[1px] border-neutral-800/40 w-fit gap-5 mt-4 p-4 md:p-2 rounded-xl fixed z-50 backdrop-blur-sm">
         <div className="items-center gap-5 md:flex hidden">
           <NavbarLink href="/">Home</NavbarLink>
           <NavbarLink href="/education">Education</NavbarLink>
