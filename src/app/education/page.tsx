@@ -26,9 +26,9 @@ const Education = () => {
     <main className="min-h-fit px-4 sm:px-8 lg:px-16">
       <Section title="Let's talk about my education.">
         <p className="text-center w-full sm:w-2/3 lg:w-1/3">
-          A developer based in Buenos Aires, Argentina, with one dream: to
-          become a Software Engineer. Currently, I&apos;m learning and focusing
-          on React and React Native.
+          Currently, I&apos;m studying System Engineering in Universidad
+          Tecnologica Nacional, where I&apos;m looking forward to learning new
+          things that can be useful in the future.
         </p>
         <div className="flex flex-col gap-5 w-full md:w-1/2 items-center">
           {institutions.map(
