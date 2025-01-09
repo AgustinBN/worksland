@@ -33,13 +33,13 @@ const Home = () => {
           on React and React Native.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <div className="flex items-center gap-1 p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
+          <button className="flex items-center gap-1 p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
             <FaNewspaper />
             Download CV
-          </div>
-          <div className="p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
+          </button>
+          <button className="p-2 rounded-xl font-semibold border border-indigo-500/40 bg-indigo-500/20 text-sm text-neutral-200 hover:cursor-pointer hover:brightness-75">
             Reach me!
-          </div>
+          </button>
         </div>
       </div>
 
