@@ -30,7 +30,7 @@ const Education = () => {
           become a Software Engineer. Currently, I&apos;m learning and focusing
           on React and React Native.
         </p>
-        <div className="flex flex-col gap-5 w-1/2 items-center">
+        <div className="flex flex-col gap-5 w-full md:w-1/2 items-center">
           {institutions.map(
             ({ label, title, from, to, description }, index) => (
               <InstitutionCard
