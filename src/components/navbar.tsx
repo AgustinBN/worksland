@@ -14,12 +14,7 @@ type NavbarLinkProps = {
   Icon?: React.ComponentType;
 };
 
-const NavbarLink = ({
-  href,
-  children,
-  blank = false,
-  Icon,
-}: NavbarLinkProps) => {
+const NavbarLink: React.FC<NavbarLinkProps> = ({ href, children, blank = false, Icon }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
   const linkClassNames = `flex items-center gap-2 text-[0.95rem]  hover:text-neutral-200 ${

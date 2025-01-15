@@ -6,13 +6,7 @@ type InstitutionCardProps = {
   description?: string;
 };
 
-const InstitutionCard = ({
-  label,
-  title,
-  from,
-  to,
-  description,
-}: InstitutionCardProps) => {
+const InstitutionCard: React.FC<InstitutionCardProps> = ({ label, title, from, to, description }) => {
   return (
     <div className="flex flex-col gap-1 items-center justify-center p-2 h-fit w-full md:w-1/2 bg-neutral-500/10 border-[1px] border-neutral-200/20 rounded-lg">
       <p className="text-md text-neutral-300 font-bold">{label}</p>

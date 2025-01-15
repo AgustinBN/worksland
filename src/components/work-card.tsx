@@ -1,4 +1,4 @@
-type WorkCard = {
+type WorkCardProps = {
   label: string;
   rank?: string;
   from: string | number;
@@ -6,7 +6,7 @@ type WorkCard = {
   description?: string;
 };
 
-const WorkCard = ({ label, rank, from, to, description }: WorkCard) => {
+const WorkCard: React.FC<WorkCardProps> = ({ label, rank, from, to, description }) => {
   return (
     <div className="flex flex-col gap-1 items-center justify-center p-2 h-fit w-full sm:w-1/4 bg-neutral-500/10 border-[1px] border-neutral-200/20 rounded-lg">
       <p className="m-0 text-md text-neutral-300 font-bold">{label}</p>
